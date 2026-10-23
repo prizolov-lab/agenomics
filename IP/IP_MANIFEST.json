@@ -5,7 +5,7 @@
   "copyright_year": 2026,
   "copyright": "© 2026 Dm.Andreyanov / Prizolov Lab",
   "license": "Apache-2.0",
-  "repository": "https://github.com/GIBDD-DPS/agenomics",
+  "repository": "https://github.com/prizolov-lab/agenomics",
   "package": "https://pypi.org/project/agenomics/",
   "first_commit": {
     "commit": "615f6ed",

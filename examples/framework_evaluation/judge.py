@@ -31,7 +31,7 @@ JUDGE_PROMPT = (
     "Задача:\n{task}\n\nОтвет ассистента:\n{answer}"
 )
 _VERDICT = re.compile(r"\b(YES|NO)\b")
-USER_AGENT = "agenomics-framework-eval/1 (+https://github.com/GIBDD-DPS/agenomics)"
+USER_AGENT = "agenomics-framework-eval/1 (+https://github.com/prizolov-lab/agenomics)"
 
 
 def parse_verdict(text: str) -> Optional[bool]:

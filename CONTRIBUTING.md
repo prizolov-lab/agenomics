@@ -5,7 +5,7 @@
 
 ## Сообщить о проблеме
 
-Откройте [GitHub Issue](https://github.com/GIBDD-DPS/agenomics/issues) с:
+Откройте [GitHub Issue](https://github.com/prizolov-lab/agenomics/issues) с:
 - Что вы делали (код или запрос к API)
 - Что ожидали получить
 - Что получили на самом деле

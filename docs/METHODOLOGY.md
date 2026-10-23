@@ -23,7 +23,7 @@ Initiative, ISO/IEC 42001, AIUC-1): рассчитанном на крупный
 ## 2. Ядро методологии
 
 Геном агента описывается четырьмя группами параметров
-(подробнее см. смежный проект [Agent Genome Mapping](https://github.com/GIBDD-DPS/agent-genome-mapping)):
+(подробнее см. смежный проект [Agent Genome Mapping](https://github.com/prizolov-lab/agent-genome-mapping)):
 
 - **Cognitive genes**: как агент мыслит
 - **Ethics genes**: какие ограничения соблюдает

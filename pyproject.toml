@@ -40,7 +40,7 @@ agenomics = "agenomics.cli:main"
 
 [project.urls]
 Homepage = "https://prizolov.ru"
-Repository = "https://github.com/GIBDD-DPS/agenomics"
+Repository = "https://github.com/prizolov-lab/agenomics"
 
 [tool.setuptools.packages.find]
 include = ["agenomics*"]

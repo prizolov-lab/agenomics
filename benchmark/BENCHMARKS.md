@@ -99,7 +99,7 @@ Per-Axis Drift Monitor, Team Compatibility Heatmap, Framework Evaluation.
 ## Как воспроизвести эти цифры
 
 ```bash
-git clone https://github.com/GIBDD-DPS/agenomics.git
+git clone https://github.com/prizolov-lab/agenomics.git
 cd agenomics
 pip install -r requirements.txt
 PYTHONPATH=. python3 -m benchmark.run_benchmark
