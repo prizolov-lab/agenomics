@@ -1,3 +1,4 @@
+# Agenomics 0.9.6 | Author: Dm.Andreyanov | Brand: Prizolov Lab | © 2026
 from agenomics import EvidenceStore, Incident, IncidentSeverity
 from agenomics.sanitize import redact
 
