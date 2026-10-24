@@ -1,4 +1,4 @@
-# Agenomics 0.9.6 | Author: Dm.Andreyanov | Brand: Prizolov Lab | © 2026
+# Agenomics 0.9.7 | Author: Dm.Andreyanov | Brand: Prizolov Lab | © 2026
 """Тесты полного пайплайна capture_log_v2 -> genome_from_capture -> EvidenceStore."""
 
 import sys

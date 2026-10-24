@@ -1,4 +1,4 @@
-# Agenomics 0.9.6 | Author: Dm.Andreyanov | Brand: Prizolov Lab | © 2026
+# Agenomics 0.9.7 | Author: Dm.Andreyanov | Brand: Prizolov Lab | © 2026
 """
 test_accumulation.py. Scorecard накопления доказательств (v0.9.6).
 

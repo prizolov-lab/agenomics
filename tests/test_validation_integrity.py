@@ -1,4 +1,4 @@
-# Agenomics 0.9.6 | Author: Dm.Andreyanov | Brand: Prizolov Lab | © 2026
+# Agenomics 0.9.7 | Author: Dm.Andreyanov | Brand: Prizolov Lab | © 2026
 """
 test_validation_integrity.py. Validation Integrity Audit v2: объём выборки
 отчёта по когорте, исключения по классу, период (--since), разбивка по

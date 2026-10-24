@@ -10,6 +10,12 @@ concurrency:
   group: framework-evaluation
   cancel-in-progress: false
 
+# Версия модели Trust Score для когорт. Закреплена отдельно от версии пакета:
+# формула не менялась с 0.9.6, а смена номера пакета иначе начинала бы новую
+# когорту и обнуляла отчёты. Менять только вместе с формулой.
+env:
+  TRUST_MODEL_VERSION: "0.9.6"
+
 jobs:
   evaluate:
     # Закреплённый образ, а не ubuntu-latest: смена образа GitHub
@@ -134,7 +140,7 @@ jobs:
         env:
           CURRENT_REGIME_SINCE: "2026-10-09T14:18:00+00:00"
         run: |
-          VERSION=$(python -c "import agenomics; print(agenomics.__version__)")
+          VERSION="$TRUST_MODEL_VERSION"
           agenomics validate frameworks_evidence.db --trust-model-version "$VERSION" --report validation_report.md
           # [Unreleased] Только текущий режим сбора: ротация по доступным моделям
           # с запуска 126 (2026-10-09T14:18Z). До него одна задача на шаблон, и

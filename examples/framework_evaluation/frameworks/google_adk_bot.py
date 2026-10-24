@@ -1,4 +1,4 @@
-# Agenomics 0.9.6 | Author: Dm.Andreyanov | Brand: Prizolov Lab | © 2026
+# Agenomics 0.9.7 | Author: Dm.Andreyanov | Brand: Prizolov Lab | © 2026
 """
 Шаблон под Google ADK на Groq через LiteLLM (без Gemini и GOOGLE_API_KEY).
 Модель, задачу и системный промпт задаёт раннер (conditions.RunContext):

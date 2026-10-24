@@ -1,4 +1,4 @@
-# Agenomics 0.9.6 | Author: Dm.Andreyanov | Brand: Prizolov Lab | © 2026
+# Agenomics 0.9.7 | Author: Dm.Andreyanov | Brand: Prizolov Lab | © 2026
 """
 conditions.py — условия прогонов Framework Evaluation: модели, задачи,
 стресс-сценарии и расписание (docs/specs/validation-data-acquisition-v1.md).
