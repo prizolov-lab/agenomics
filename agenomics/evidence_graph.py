@@ -37,6 +37,8 @@ from dataclasses import dataclass, field
 from datetime import datetime, timezone
 from typing import Dict, List, Optional
 
+from .sanitize import redact
+
 DONOR_TYPES = ("execution", "outcome", "judge", "security", "human")
 
 # Уровни качества доказательства. Шкала упорядочена: Q4 сильнее Q0.
@@ -454,7 +456,7 @@ class EvidenceGraphMixin:
             "INSERT INTO evidence (observation_id, donor_id, evidence_type, finding, quality_level, confidence, "
             "source_reference, metadata_json, created_at, collector_version, fingerprint) "
             "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
-            (observation_id, donor_id, evidence_type, finding, quality_level, confidence, source_reference,
+            (observation_id, donor_id, evidence_type, redact(finding), quality_level, confidence, source_reference,
              json.dumps(metadata or {}, ensure_ascii=False, sort_keys=True), _iso(timestamp),
              _collector_version(), fp),
         )
@@ -630,7 +632,7 @@ class EvidenceGraphMixin:
             "INSERT INTO outcomes (prediction_id, donor_id, outcome_type, occurred, verification, observed_at, details, "
             "outcome_class, quality_level, source_reference, collector_version, fingerprint) "
             "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
-            (prediction_id, donor_id, outcome_type, int(bool(occurred)), verification, observed.isoformat(), details,
+            (prediction_id, donor_id, outcome_type, int(bool(occurred)), verification, observed.isoformat(), redact(details),
              outcome_class, quality_level, source_reference, _collector_version(), fp),
         )
         self._conn.commit()

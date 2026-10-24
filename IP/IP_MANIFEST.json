@@ -258,6 +258,15 @@
       "since": "0.9.6"
     },
     {
+      "id": "text-sanitization",
+      "name": "Очистка текстов ошибок перед записью в базу",
+      "type": "module",
+      "paths": [
+        "agenomics/sanitize.py"
+      ],
+      "since": "0.9.7"
+    },
+    {
       "id": "accumulation-scorecard",
       "name": "Scorecard накопления доказательств",
       "type": "module",

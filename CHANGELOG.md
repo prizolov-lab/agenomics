@@ -11,6 +11,8 @@ Validation Data Acquisition v1: изменение программы сбора
 **Не меняется:** Trust Score и его формула, `PROTOCOL_THRESHOLDS`, вердикты, уровни утверждений, holdout 60/40, путь заморозка → донор → исход.
 
 ### Добавлено
+- **Очистка текстов ошибок** (`agenomics/sanitize.py`, `redact()`): идентификаторы организации (`org_...`), ключи и токены заменяются метками до записи в `incidents.description`, `evidence.finding`, `outcomes.details`. Найдено в базе Framework Evaluation (100 инцидентов и 37 доказательств с `org_...` в тексте ошибки Groq); уже записанные строки не переписываются (таблицы append-only), в новых запусках значений нет. Тесты `tests/test_sanitize.py`
+- Workflow Framework Evaluation: `concurrency` (один запуск за раз), чтобы два запуска не продолжали одну историю базы
 - **Тип когорты предсказания** (`cohort_type`: `natural`, `stress_runtime`, `stress_security`, `stress_task`, `external`; `COHORT_TYPES`): входит в снимок и его SHA-256, колонка добавляется миграцией; предсказания без типа считаются `natural`
 - **Фильтр когорт**: `validate(..., cohort_types=...)`, `agenomics validate --cohort-type X` (повторяемый, `all` смешивает явно с предупреждением); по умолчанию только `natural`. Отчёт показывает когорты выборки
 - **Согласие доноров** (`donor_agreement`, `ValidationReport.donor_agreement`) для целей, где два донора оценивают одно событие (сейчас `task_failure`): доля совпавших исходов и таблица расхождений. Сведение исходов не меняется: событие, если его зафиксировал хотя бы один донор

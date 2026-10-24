@@ -26,6 +26,7 @@ from datetime import datetime, timezone
 from typing import Dict, List, Optional
 
 from .evidence_graph import GRAPH_SCHEMA_SQL, EvidenceGraphMixin
+from .sanitize import redact
 from .feedback import Incident, IncidentCategory, IncidentSeverity, IncidentSource
 
 # 1.1 (v0.9.0): добавлены таблицы donors/evidence/predictions/outcomes.
@@ -340,7 +341,7 @@ class EvidenceStore(EvidenceGraphMixin):
                 "INSERT INTO incidents "
                 "(observation_id, severity, description, category, source, confirmed, resolution) "
                 "VALUES (?, ?, ?, ?, ?, ?, ?)",
-                (obs_id, severity_value, incident.description, category_value, source_value,
+                (obs_id, severity_value, redact(incident.description), category_value, source_value,
                  confirmed_value, resolution_value),
             )
 

@@ -5,6 +5,11 @@ on:
     - cron: "0 */6 * * *"
   workflow_dispatch:
 
+# Один запуск за раз: два запуска не должны продолжать одну историю базы параллельно.
+concurrency:
+  group: framework-evaluation
+  cancel-in-progress: false
+
 jobs:
   evaluate:
     # Закреплённый образ, а не ubuntu-latest: смена образа GitHub
