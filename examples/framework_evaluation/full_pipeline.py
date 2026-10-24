@@ -1,4 +1,4 @@
-# Agenomics 0.9.6 | Author: Dm.Andreyanov | Brand: Prizolov Lab | © 2026
+# Agenomics 0.9.7 | Author: Dm.Andreyanov | Brand: Prizolov Lab | © 2026
 """
 full_pipeline.py. Склеивает захват лога, построение генома, TrustScorer
 и запись в EvidenceStore в один вызов.
@@ -486,7 +486,7 @@ def run_framework_and_record(
             framework=framework, framework_version=framework_version, model_version=model_version,
             prompt_version=prompt_version, domain=domain, autonomy=autonomy, has_ledger=has_ledger,
         ),
-        trust_model_version=None,  # проставится текущей версией agenomics
+        trust_model_version=os.environ.get("TRUST_MODEL_VERSION") or None,  # None: версия пакета; в CI закреплена, см. workflow
         evaluation_period=scored_at.isoformat(),
         request_count=1,
         collector="sdk",

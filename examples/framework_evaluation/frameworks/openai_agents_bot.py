@@ -1,4 +1,4 @@
-# Agenomics 0.9.6 | Author: Dm.Andreyanov | Brand: Prizolov Lab | © 2026
+# Agenomics 0.9.7 | Author: Dm.Andreyanov | Brand: Prizolov Lab | © 2026
 """
 Шаблон под OpenAI Agents SDK, OpenAI-совместимая модель на Groq.
 Модель, задачу и системный промпт задаёт раннер (conditions.RunContext):

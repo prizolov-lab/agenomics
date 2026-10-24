@@ -1,4 +1,4 @@
-# Agenomics 0.9.6 | Author: Dm.Andreyanov | Brand: Prizolov Lab | © 2026
+# Agenomics 0.9.7 | Author: Dm.Andreyanov | Brand: Prizolov Lab | © 2026
 """
 test_cohorts.py. Типы когорт предсказаний, фильтр когорт в Validation
 Engine и scorecard, согласие доноров (docs/specs/validation-data-acquisition-v1.md).
