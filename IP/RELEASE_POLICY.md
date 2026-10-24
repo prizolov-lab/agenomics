@@ -45,7 +45,7 @@
 ## Однократная настройка
 
 - **PyPI** → проект agenomics → Publishing → Add a new publisher → GitHub:
-  owner `GIBDD-DPS`, repository `agenomics`, workflow `publish.yml`,
+  owner `prizolov-lab`, repository `agenomics`, workflow `publish.yml`,
   environment `pypi`.
 - **GitHub** → Settings → Actions → General → Workflow permissions →
   «Allow GitHub Actions to create and approve pull requests» (для шага 11).
